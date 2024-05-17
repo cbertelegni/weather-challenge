@@ -1,4 +1,3 @@
-# Etapa de construcción
 FROM python:3.10-alpine as weather_challenge_base
 
 WORKDIR /src
@@ -10,7 +9,6 @@ RUN pip install --no-cache-dir --upgrade -r /src/requirements.txt
 RUN rm /src/requirements.txt
 
 COPY . /src/app
-# WORKDIR /src/weather_challenge
 
 # For Develoment
 FROM weather_challenge_base as weather_challenge_dev
