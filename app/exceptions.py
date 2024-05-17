@@ -1,0 +1,6 @@
+class WeatherClientException(Exception):
+    ...
+
+
+class CityNotFoundException(Exception):
+    ...

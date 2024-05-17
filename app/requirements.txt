@@ -1,0 +1,9 @@
+fastapi[all]==0.109.0
+pydantic-settings==2.2.1
+uvicorn[standard]==0.27.0
+gunicorn==21.2.0
+coverage==7.4.4
+requests==2.31.0
+pytest==8.1.1
+responses==0.25.0
+fastapi-cache2==0.2.1
