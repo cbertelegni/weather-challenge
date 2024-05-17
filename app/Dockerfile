@@ -1,4 +1,3 @@
-# Etapa de construcción
 FROM python:3.10-alpine as weather_challenge_base
 
 WORKDIR /src
