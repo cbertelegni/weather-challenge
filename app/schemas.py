@@ -2,10 +2,10 @@ from pydantic import BaseModel
 from enum import Enum
 
 
-
 class TemperatureUnitsEnum(str, Enum):
     imperial = "imperial"  # Fahrenheit
     metric = "metric"  # Celsius
+
 
 class CoordinateSchema(BaseModel):
     lat: float
