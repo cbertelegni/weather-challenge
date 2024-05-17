@@ -11,11 +11,11 @@ The data for this app is taken from [https://openweathermap.org/api]
 ## Application Setup 
 
 - Duplicate the `app/.template.env` to `app/.env`
-- Run `make build` in a terminal
+- Run `make build`
 
 ## Running the server
 
-Run `make run` and go to [http://0.0.0.0:8000/docs] in your browser to see the swagger UI
+Run `make run` and go to [http://0.0.0.0:8000/] in your browser to see the swagger UI
 
 
 ## Make comands
