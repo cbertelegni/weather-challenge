@@ -1,5 +1,6 @@
 from contextlib import asynccontextmanager
-from fastapi import FastAPI, Depends, Request, status, HTTPException
+from typing import Annotated
+from fastapi import FastAPI, Depends, Request, status, HTTPException, Query
 from app.core import settings
 from fastapi_cache.decorator import cache
 from fastapi_cache import FastAPICache
@@ -36,7 +37,7 @@ def city_not_found_exception_handler(request: Request, exc: WeatherClientExcepti
 @cache(expire=CACHE_MAX_AGE)
 def get_weather(
     city: str,
-    country: str,
+    country: Annotated[str | None, Query(max_length=2, min_length=2)],
     units: TemperatureUnitsEnum = TemperatureUnitsEnum.imperial,
     weather_service: WeatherService = Depends(WeatherService.build)
 ) -> WeatherSchema:
