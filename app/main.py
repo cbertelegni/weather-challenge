@@ -29,7 +29,7 @@ def city_not_found_exception_handler(request: Request, exc: CityNotFoundExceptio
 
 
 @app.exception_handler(WeatherClientException)
-def city_not_found_exception_handler(request: Request, exc: WeatherClientException):
+def weather_client_exception_handler(request: Request, exc: WeatherClientException):
     raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
